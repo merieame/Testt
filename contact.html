@@ -7,12 +7,20 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <nav class="site-nav" aria-label="Navigation principale">
-        <a href="index.html">Accueil</a>
-        <a href="about.html">À propos</a>
-        <a href="contact.html" aria-current="page">Contact</a>
-        <a href="login.html">Connexion</a>
-    </nav>
+    <header class="top-nav">
+        <div class="top-nav__inner">
+            <a href="index.html" class="top-nav__logo">Mon site</a>
+            <button type="button" class="top-nav__burger" aria-controls="nav-menu" aria-expanded="false" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="top-nav__menu" id="nav-menu" aria-label="Navigation principale">
+                <a href="index.html">Accueil</a>
+                <a href="about.html">À propos</a>
+                <a href="contact.html" aria-current="page">Contact</a>
+                <a href="login.html">Connexion</a>
+            </nav>
+        </div>
+    </header>
     <main class="login-page">
         <h1>Contact</h1>
         <form id="contact-form">
@@ -34,5 +42,6 @@
             alert("Merci ! (démo : pas encore d’envoi vers un serveur.)");
         });
     </script>
+    <script src="nav.js"></script>
 </body>
 </html>
