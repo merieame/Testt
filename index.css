@@ -616,3 +616,111 @@ img {
     padding: 40px 24px;
   }
 }
+
+/* ===== SITE NAV (pages simples) ===== */
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  justify-content: center;
+  padding: 24px;
+  border-bottom: 1px solid var(--glass-border);
+  background: var(--dark-2);
+}
+
+.site-nav a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--primary-light);
+}
+
+/* ===== LOGIN / HOME (étape par étape) ===== */
+.simple-page {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.simple-page h1 {
+  margin-bottom: 16px;
+  font-size: 1.75rem;
+}
+
+.simple-page p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.login-page,
+.home-page {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.login-page h1,
+.home-page h1 {
+  margin-bottom: 24px;
+  font-size: 1.75rem;
+}
+
+.login-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-page label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.login-page input,
+.login-page textarea {
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--glass-border);
+  background: var(--dark-2);
+  color: var(--text-light);
+  font-family: inherit;
+}
+
+.login-page textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.login-page button {
+  margin-top: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--gradient);
+  color: var(--text-light);
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.login-hint {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.login-hint code {
+  color: var(--primary-light);
+}
+
+.home-page a {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--primary-light);
+  text-decoration: underline;
+}
