@@ -3,20 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
+    <title>Espace administrateur</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
-    <nav class="site-nav" aria-label="Navigation principale">
-        <a href="index.html">Accueil</a>
-        <a href="about.html">À propos</a>
-        <a href="contact.html">Contact</a>
-        <a href="login.html">Connexion</a>
-    </nav>
-    <main class="home-page">
-        <h1>Bienvenue</h1>
-        <p>Connexion réussie.</p>
-        <a href="login.html">Déconnexion</a>
+<body class="admin-page">
+    <header class="admin-header">
+        <a href="index.html" class="admin-header__brand">Othmane</a>
+        <nav class="admin-header__drawer" id="admin-drawer" aria-label="Menu">
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À propos</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="admin-header__actions">
+            <a href="login.html" class="admin-header__logout">Déconnexion</a>
+            <button type="button" class="admin-header__burger" id="nav-burger" aria-controls="admin-drawer" aria-expanded="false" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <h1 class="admin-main__title">Bienvenue, Administrateur</h1>
+        <p class="admin-main__lead">Ceci est votre espace personnel. Vous pouvez gérer vos contenus et vos paramètres ici.</p>
+
+        <ul class="admin-stats">
+            <li class="admin-stats__card">
+                <span class="admin-stats__label">Projets</span>
+                <span class="admin-stats__value admin-stats__value--gold">12</span>
+                <span class="admin-stats__hint">En cours</span>
+            </li>
+            <li class="admin-stats__card">
+                <span class="admin-stats__label">Messages</span>
+                <span class="admin-stats__value admin-stats__value--green">5</span>
+                <span class="admin-stats__hint">Nouveaux</span>
+            </li>
+            <li class="admin-stats__card">
+                <span class="admin-stats__label">Vues</span>
+                <span class="admin-stats__value admin-stats__value--gold">1,2k</span>
+                <span class="admin-stats__hint">Dernières 24h</span>
+            </li>
+        </ul>
     </main>
+    <script src="home.js"></script>
 </body>
 </html>
